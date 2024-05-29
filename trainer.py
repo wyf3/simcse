@@ -60,9 +60,9 @@ if __name__ == '__main__':
     parser.add_argument("--eval_step", type=int, default=100, help="every eval_step to evaluate model")
     parser.add_argument("--max_len", type=int, default=512, help="max length of input")
     parser.add_argument("--seed", type=int, default=42, help="random seed")
-    parser.add_argument("--train_file", type=str, default=r"G:\train.txt")
+    parser.add_argument("--train_file", type=str, default=r"train.txt")
     parser.add_argument("--pretrain_model_path", type=str,
-                        default="G:\stella-large-v2")
+                        default="stella-large-v2")
     parser.add_argument("--pooler", type=str, choices=['cls', "pooler", "last-avg", "first-last-avg"],
                         default='cls', help='pooler to use')
     parser.add_argument("--train_mode", type=str, default='unsupervise', choices=['unsupervise', 'supervise'], help="unsupervise or supervise")

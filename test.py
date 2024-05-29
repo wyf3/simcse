@@ -10,8 +10,8 @@ def normalize(x):
 def cosine_similarity(x, y):
     return 1 - cosine(x, y)
 
-model = BertModel.from_pretrained("/home/wanyunfei/simcse/SimCSE/output/checkpoint-2000")
-tokenizer = BertTokenizer.from_pretrained("/home/wanyunfei/simcse/SimCSE/output/checkpoint-2000")
+model = BertModel.from_pretrained("output/checkpoint-2000")
+tokenizer = BertTokenizer.from_pretrained("output/checkpoint-2000")
 model.eval()
 s1 = tokenizer("一种分布式光储系统",return_tensors='pt')
 s2 = tokenizer("一种分布式系统",return_tensors='pt')
@@ -27,7 +27,7 @@ print(cosine_similarity(res1, res3))
 #sentence_transformer加载
 
 # from sentence_transformers import models,SentenceTransformer
-# bert = models.Transformer('/home/wanyunfei/simcse/SimCSE/output/checkpoint-2000')
+# bert = models.Transformer('output/checkpoint-2000')
 # pooler = models.Pooling(bert.get_word_embedding_dimension())
 # normalize = models.Normalize()
 # model = SentenceTransformer(modules=[bert, pooler, normalize])
